@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+*{
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    width: 90%;
+    border: 0.02px ;
+    margin: 3px auto;
+    background-color: rgb(234, 228, 240);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.title{
+    color: white;
+    background-color: rgb(27, 177, 223);
+    margin-top: 10px;
+    text-shadow: 3px 3px 9px white;
+    border-radius: 3px;
+}
+.title h2{
+    margin-left: 10px;
+    text-shadow: 3px 3px 9px rgb(12, 148, 148);
+}
+.mainContainer{
+
+}
+
+.inputContainer{
+    background-color: rgba(158, 221, 240, 0.685);
+    display:block;
+    width: 100%;
+    margin: 0px auto;
+    border-radius: 8px;
+    box-shadow: 3px 3px 9px;
+}
+input{
+    height: 40px;
+    background-color: rgba(250, 244, 236, 0.856);
+}
+input, textarea {
+    margin: 10px 20px;
+    width: 90%;
+    border-radius: 6px;
+    font-size: 15px;
+}
+button{
+    padding: 8px;
+    margin: 10px 10px; 
+    box-shadow: 1px 1px 9px;
+    
+    
+}
+
+.contentContainer{
+width: 40%;
+margin: 20px;
+display: inline-grid;
+}
+.contentContainer button{
+    width: 100px;
+    display: inline;
+}
+
+.contetContainer, h1{
+   background-color: purple;
+   color: wheat
+}
+#todoList{
+    background-color: ;
+    width: 600px ;
+    display: inline;
+    width: 90%;
+}
+
+    </style>
+    <title>Todo Manager</title>
+</head>
+<body>
+    <div class="title"><h2>TO DO LIST</h2></div>
+    <div class="mainContainer">
+        <div class="inputContainer">
+                 <input required id="inputAdd" type="text" placeholder="Title">
+                <textarea required id="inputArea" name="" id="Content" placeholder="Contents goes here............" cols="30" rows="10">
+                </textarea>
+                <button id="contAdd" onclick="add()" type="submit">📌 Add</button>
+                <button id="contDelet" onclick="deleteCont()" type="reset"> Clare</button>
+            </div>
+            
+      <div id="todoList"> 
+          <div id="contentArea" class="contentContainer">
+            <h1 id="title"> Hello</h1> <hr>
+            <p id="text2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut dolor quaerat incidunt veniam, voluptatem quis a, distinctio, aperiam harum voluptatum ducimus nostrum ex. Neque sed hic tenetur corporis natus deleniti!</p>
+            
+            <button id="btnEdit" href="">📝 Edit</button>
+            <button id="btnDelete" href="">🧼 Delete</button><hr>
+          </div>
+       </div> 
+    </div> 
+    <script>
+   
+   
+     function add(){
+
+        let headerInput = document.getElementById("inputAdd");
+        let addTitle = headerInput.value;
+        let bodyInput = document.getElementById("inputArea");
+        let addParagraph = bodyInput.value;
+        let contentArea = document.getElementById("contentArea");
+        let todo = document.getElementById("todoList");
+        let btn1 = document.getElementById("btnEdit");
+        let btn2 = document.getElementById("btnDelete");
+        
+        //date
+        let d = new Date;
+        let date = "Time: " + d.getHours() + ":" + d.getMinutes() + "    Date: " + d.getFullYear() + "-" + d.getMonth() + "-" + toString(d.getUTCDay());
+        console.log(date);
+
+        //Template
+        let contentHolder = document.createElement("div");
+        let title = document.createElement("h1");
+        let fieldDate = document.createElement("div");
+        let parg = document.createElement("p");
+        let btnEdit = document.createElement("button");
+        let btnDlt = document.createElement("button");
+        let rule = document.createElement("hr");
+
+         title.textContent=addTitle;
+         parg.textContent=addParagraph;
+         btnEdit.textContent="📝 Edit";
+         btnDlt.textContent="🧹 Delete";
+
+         contentHolder.appendChild(title);
+         contentHolder.appendChild(rule);
+         contentHolder.appendChild(parg);
+         contentHolder.appendChild(rule);
+         contentHolder.appendChild(btnEdit);
+         contentHolder.appendChild(btnDlt) ;
+         contentHolder.appendChild(rule);
+
+         contentHolder.classList.add("contentContainer");
+         todo.appendChild(contentHolder);
+        
+         // Clare input
+         headerInput.value =" ";
+         bodyInput.value =" ";
+        
+     }
+        
+   function deleteCont(){
+        let headerInput = document.getElementById("inputAdd");
+        let bodyInput = document.getElementById("inputArea");
+        headerInput.value =" ";
+         bodyInput.value =" ";
+    }
+
+    </script>
+</body>
+</html>
