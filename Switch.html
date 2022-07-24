@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<style>
+body{
+  background : purple;
+  color: white;
+}
+
+.form{
+  margin: 30px auto;
+  background:red;
+  
+}
+
+label, input, select, #submit{
+  margin:3px 2%;
+  width: 200px;
+  padding: 3px;
+}
+
+result{
+  background: white;
+  width:250px;
+  height:1px;
+  margin: 10px auto;
+  color: 
+</style>
+</head>
+<body>
+ 
+  <div class='form'>
+     <h2 for="items"> Choose your favorite car </h2>
+   <input id='name' placeholder="Name" type="text"> 
+    <select name="Cars" id="carSelected">
+        <option value="Toyota">Toyota</option>
+        <option value="Hunder">Hunder</option>
+        <option value="BMW">BMW</option>
+        <option value="Volvo">Volvo</option>
+      </select>
+    
+       
+    <input id='sub,it' onclick='submit()' type="submit">
+    
+  </div>
+    <div id='result'>...</div>
+
+
+
+ <script>
+        
+
+function submit(){
+  let a = document.getElementById('carSelected').value;
+  let b = document.getElementById('name').value;
+  switch (a){
+   case 'Toyota': document.getElementById('result').innerText=`Hello ${b}, You picked Toyota`; break;
+   case 'Hunder': document.getElementById('result').innerText=`Hello ${b}, You picked Hunder`; break;
+   case 'BMW': document.getElementById('result').innerText=`Hello ${b}, You picked BMW`; break;
+   case 'Volvo': document.getElementById('result').innerText=`Hello ${b}, You picked Volvo`; break;
+}
+}
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+*{
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    width: 90%;
+    border: 0.02px ;
+    margin: 3px auto;
+}
+
+.title{
+    color: white;
+    background-color: gray;
+    margin: 0px;
+}
+.title h2{
+    margin-left: 10px;
+    text-shadow: 3px 3px 9px rgb(12, 148, 148);
+}
+.mainContainer{
+
+}
+
+.inputContainer{
+    background-color: antiquewhite;
+    display:block;
+    width: 100%;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+
+input, textarea {
+    margin: 10px 20px;
+    width: 85%;
+    
+}
+button{
+    padding: 8px;
+    margin: 5px;
+    margin-left: 20px;
+}
+
+.contentContainer{
+width: 40%;
+margin: 20px;
+}
+
+.contentContainer p{
+    background-color: aqua;
+}
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="title"><h2>TO DO LIST</h2></div>
+    <div class="mainContainer">
+        <div class="inputContainer">
+                 <input id="inputAdd" type="text">
+                <textarea id="inputArea" name="" id="Content" cols="30" rows="10">
+                </textarea>
+                <button id="contAdd" onclick="add()" type="submit">📌 Edit</button>
+                <button id="contDelet" onclick="deletCont()"> 🧹 Delete </button>
+            </div>
+            
+      <div id="todoList"> 
+          <div id="contentArea" class="contentContainer">
+            <h1 id="title"> Hello</h1> <hr>
+            <p id="text2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut dolor quaerat incidunt veniam, voluptatem quis a, distinctio, aperiam harum voluptatum ducimus nostrum ex. Neque sed hic tenetur corporis natus deleniti!</p>
+            
+            <button id="btnEdit" href="">📝 Edit</button>
+            <button id="btnDelete" href="">🧼 Delete</button><hr>
+          </div>
+       </div> 
+    </div>
+    <script>
+
+    function deletCont(){
+
+    }
+    
+    
+     function add(){
+        let addTitle = document.getElementById("inputAdd").value;
+        let addParagraph = document.getElementById("inputArea").value;
+        let contentArea = document.getElementById("contentArea");
+        let todo = document.getElementById("todoList");
+        let btn1 = document.getElementById("btnEdit");
+        let btn2 = document.getElementById("btnDelete");
+
+        let contentHolder = document.createElement("div");
+        let title = document.createElement("h1");
+        let parg = document.createElement("p");
+        let btnEdit = document.createElement("button");
+        let btnDlt = document.createElement("button");
+        let rule = document.createElement("hr");
+
+         title.textContent=addTitle;
+         parg.textContent=addParagraph;
+         btnEdit.textContent="📝 Edit";
+         btnDlt.textContent="🧹 Delete";
+
+         contentHolder.appendChild(title);
+         contentHolder.appendChild(rule);
+         contentHolder.appendChild(parg);
+         contentHolder.appendChild(rule);
+         contentHolder.appendChild(btnEdit);
+         contentHolder.appendChild(btnDlt) ;
+         contentHolder.appendChild(rule);
+
+         contentHolder.classList.add("contentContainer")
+         todo.appendChild(contentHolder)
+
+        console.log(rule);
+     }
+
+    
+     
+    </script>
+</body>
+</html>

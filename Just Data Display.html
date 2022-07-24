@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>.container{
+        background:gray;
+        color:white;
+        height:700px;
+        padding:20%;
+        margin:0px auto;
+        
+      }
+      .container h3{
+        color:wheat;
+        margin-bottom:-6px;
+      }
+      
+      
+        
+      
+      .container2{
+        background: purple;
+        color:white;
+        display:inline-block;
+        padding: 5%;
+        text-align:rigt;
+        width: 90%;
+        margin-left:    ;
+         
+      }
+      
+      input{
+        color: brown;
+        margin-left: px;
+        width: 100%;
+        border-radius: 5px;
+        padding: 5px;
+      }
+
+      label{
+        
+        margin-left:;
+        text-align: center;
+      }
+      #nameInput #occupationInput #salaryInput{
+        text-align:left;
+        color:red;
+      }
+      
+      #display{
+        background:white;
+        padding:20px;
+       color:black;
+        display:grid;
+        grid-template-columns:auto auto auto;
+        
+      }
+      
+      .fild{
+        background:skyblue;
+        border: 1px solid purple;
+        padding:10px;
+      }
+
+      button{
+        margin: 10px 20px;
+        width: 30%;
+        color: purple   ;
+      }
+      </style>
+    <title>Document</title>
+</head>
+<body>
+    
+        <div class="container">   
+           <h3>Sample of a data page. </h3><hr>
+          
+             <div class="container2">
+               
+              <label  for="">Name:</label><input id="nameInput"   type="text"><br>
+              <label  for="">Occupation:</label><input id="occupationInput" type="text"><br>
+              <label  for="">Salary: </label><input id="salaryInput" type="text"><hr>
+              <button id="btn1" onclick="btn11()">Submit</button> <button id="btn2" onclick="btn2()">Delete</button>
+          </div>
+           <div id="display">
+                   
+             <div class=fild id="fild1">Name</div>
+             <div class=fild id="fild2">Occupation</div>
+             <div class=fild id="fild3">Salary</div>
+             <div class=fild id="fild4">....</div>
+             <div class=fild id="fild5">....</div>
+             <div class=fild id="fild6">....</div>
+           </div>
+        </div>
+         
+       <script>
+
+let display = document.getElementById("fild1").innerText; 
+  
+  function btn11(){
+    let formInput = {};
+    //grab input value
+   let name = document.getElementById("nameInput").value;
+   let occupation = document.getElementById("occupationInput").value;
+   let salary = document.getElementById("salaryInput").value;
+    
+    //Assign filed to object
+    formInput.Name =name;
+    formInput.Occupation =occupation;
+    formInput.Salary =salary;  
+  
+    document.getElementById("fild4").innerText=formInput.Name; 
+    document.getElementById("fild5").innerText=formInput.Occupation;
+    document.getElementById("fild6").innerText=formInput.Salary;
+    
+  }
+  
+  function btn2(){
+      document.getElementById("nameInput").value="";
+     document.getElementById("occupationInput").value="";
+     document.getElementById("salaryInput").value="";
+    document.getElementById("fild4").innerText=""; 
+    document.getElementById("fild5").innerText="";
+    document.getElementById("fild6").innerText="";
+  }
+       </script>
+</body>
+</html>

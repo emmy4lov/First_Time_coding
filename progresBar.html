@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+*{
+  margin: 0px;
+  padding: 0px;
+  
+}
+
+.viewPanel{
+  position:relative ;
+  padding: 3px;
+  background: rgb(189, 184, 184);
+  width:80%;
+  margin:30px ;
+  border-radius: 15px;
+  box-shadow: 10px 5px 15px white;
+}
+
+.bar{
+  background:white;
+  width:20%;
+  text-align: center;
+  border-radius: 15px;
+  border-right: 12px solid white;
+animation: prog 10s infinite; 
+
+}
+
+@keyframes prog{  
+  40%{
+    width:40%;
+    border-right: 12px solid yellow;
+  }
+  60%{ width:60%;
+    color: white;
+    border-right: 12px solid green;}
+  70%{
+    color: white;
+     width:70%;
+     border-right: 12px solid purple;
+  }
+  80%{
+    color: white;
+    width:80%;
+    border-right: 12px solid red;
+  }
+  90%{
+    color: white;
+    width:90%;
+    border-right: 12px solid white;
+  }
+  100%{
+    color: white;
+    width:99%;
+    background:rgb(13, 13, 34);
+    border-right: 12px solid yellow;
+  }
+}
+
+.viewPanel_2{
+  position:relative ;
+  padding: 3px;
+  background: plum;
+  width:80%;
+  margin:30px ;
+  border-radius: 15px;
+  box-shadow: 10px 5px 15px white;
+}
+
+.bar_2{
+  background:white;
+  width:20%;
+  text-align: center;
+  border-radius: 15px;
+  border-right: 12px solid white;
+animation: prog_2 5s infinite; 
+
+
+}
+
+@keyframes prog_2{  
+  40%{
+    width:40%;
+    border-right: 12px solid yellow;
+  }
+  60%{ width:60%;
+    color: white;
+    border-right: 12px solid green;}
+  70%{
+    color: white;
+     width:70%;
+     border-right: 12px solid purple;
+  }
+  80%{
+    color: white;
+    width:80%;
+    border-right: 12px solid red;
+  }
+  90%{
+    color: white;
+    width:90%;
+    border-right: 12px solid white;
+  }
+  100%{
+    color: white;
+    width:98%;
+    background:rgb(13, 13, 34);
+    border-right: 12px solid greenyellow;
+  }
+}
+    </style>
+    <title>Progress Bar</title>
+</head>
+<body>
+    
+        <div class="viewPanel">
+          
+          <div class="bar">loading  ..... </div>      
+    </div>
+
+    <div class="viewPanel_2">
+          
+        <div class="bar_2">loading  ..... </div>
+        </div>
+/* The bootstrap way
+
+
+
+<script>
+    
+</script>
+</body>
+</html>

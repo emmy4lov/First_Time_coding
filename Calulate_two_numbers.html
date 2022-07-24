@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pb{color:white; 
+    font-size: 19px;
+     background: purple;
+     padding: 20px;
+     display: fle;
+}
+h3{
+  color: Purple;
+  margin: 50px auto 0px;
+}
+    </style>
+</head>
+<body>
+
+    <h3>Multipy Numbers </h3>
+    <div class='pb'>
+       <span>
+         <input type="text" id='input1', placeHolder='First'>
+         <input type="text" id='input2', placeHolder='Second'>
+         
+         </span>
+         <button onclick='submitButton1()'>Submit</button>
+        
+      
+      
+      
+      
+  <div id='pageBody' >Hello you </div>
+  
+      
+</div>
+
+
+<script>
+   function submitButton1(){
+  
+  let A1 = document.getElementById('input1').value;
+  let B1 = document.getElementById('input2').value;
+   let ans = A1 * B1;
+  document.getElementById('pageBody').innerText=ans;
+}
+ 
+
+</script> 
+</body>
+</html>
