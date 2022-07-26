@@ -13,7 +13,6 @@
     }
     .page{
        width: 90%;
-       color: ; 
        margin: 10px auto;
     }
 
@@ -24,16 +23,16 @@
     .bodySection{
         display: grid;
         grid-template-columns: auto auto auto;
-        column-gap: 5px;
         min-height: 400px;
+    }
 
-             }
     .questions{
         background-color: rgb(214, 240, 232);
         grid-column-start:1;
         grid-column-end:3; 
         padding: 10px; 
         color: rgb(12, 124, 87);
+        margin: 8px 8px;
     } 
    h3{
     padding-top: 10px;
@@ -41,18 +40,17 @@
     .questions input{
         margin-left: 15px;
             }
-    .questions label{
-        
-    }        
+            
 
     .sidebar{
         grid-column-start: 3;
         grid-column-end: ; 
         background-color: blueviolet;
         padding: 10px;
+        margin:8px 8px;
     }
     </style>
-    <title>Document</title>
+    <title>Handle User Input</title>
 </head>
 <body>
     <div class="page">
@@ -65,6 +63,7 @@
            <h3>Hoddies</h3>
            
            <form action="">
+            <div class="hobbies">
             <input type="checkbox" id="Sport" value="Sport" name="sport">
             <label for="sport">Sport</label><br>
 
@@ -73,7 +72,7 @@
 
             <input type="checkbox" name="Socialmedia" id="socialMedia" value="socialMedia">        
             <label for="">Social media</label><br>
-
+         </div>
             <h3>Favorite Food</h3>
             <input type="radio" id="beans" value="beans" name="beans">
             <label for="sport">Beans</label><br>
@@ -92,6 +91,10 @@
     </div>
 
     </div>
+    <script>
+        
+
+    </script>
 </body>
 
 <script>
