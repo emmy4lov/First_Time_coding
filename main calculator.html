@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+ *{
+  margin:0px;
+  padding:0px;
+  box-sizing:border-box;
+}
+
+#calculator{
+  background: #93ACB5;
+  width:200px;  
+  margin:5% 30%;
+  position: absolute;
+  border-radius:9px;
+  padding:5px;
+  border:5px solid
+}
+
+.display{
+  background:#F2F4FF;
+  height: 100px;
+  margin:8px auto;
+  position: relative;
+  border:5px solid ;
+  padding:5px; 
+  color:#6C756B;
+  font-weight:bold;
+  text-align:right;
+}
+
+.calculator_items{
+  display:grid;
+  grid-template-columns: auto auto auto auto;
+  color:white;
+  padding:2px;  
+  grid-column-gap:2px;
+  row-gap:4px;
+  text-align: center;
+  border-radius: 9px
+   
+}
+
+.items{
+  border:1px solid white;
+  border-radius:5px;
+  padding: 9px;
+  box-shadow: 4px 4px 9px;
+  font-weight:bold;
+  background:  #7bb5f742;
+  
+}
+
+.items:hover{
+  color: yellow;
+}
+#items8{
+  grid-row: 2/ span 3;
+  padding: 50%;  
+}
+
+#items15{
+  grid-column:1 / span 2;
+}
+    </style>
+    <title>Calculator</title>
+</head>
+<body>
+    <div id="calculator">
+            
+        <div class="display"> 
+             <div id="display1"> DISPLAY No<hr> </div>                              
+        </div>
+
+
+            <div class="calculator_items">
+                    <div class="items" id="items1" onclick="AC()" >AC</div>
+                    <div class="items" id="items2" onclick="divide()">/</div>
+                    <div class="items" id="items3" onclick="multiply()">*</div>
+                   <div class="items" id="items4" onclick="subtract()">-</div>
+                   <div class="items" id="items5" onclick="Key7()">7</div>
+                   <div class="items" id="items6" onclick="key8()">8</div>
+                   <div class="items" id="items7" onclick="key9()">9</div>
+                   <div class="items" id="items8" onclick="plus()">+</div>
+                   <div class="items" id="items9" onclick="key4()">4</div>
+                   <div class="items" id="items10" onclick="key5()">5</div>
+                   <div class="items" id="items11" onclick="key6()">6</div>
+                   <div class="items" id="items12" onclick="key1()">1</div>
+                   <div class="items" id="items13" onclick="key2()">2</div>
+                   <div class="items" id="items14" onclick="key3()">3</div>
+                   <div class="items" id="items15" onclick="equals()">=</div>
+                   <div class="items" id="items16" onclick="key0()">0</div>
+                   <div class="items" id="items17" onclick="point()">.</div>
+                </div>
+                
+<script>
+    const display1 = document.getElementById("display1")
+
+    const key1 = document.getElementById("item1").value
+
+ </script>    
+    </body>
+</html>
