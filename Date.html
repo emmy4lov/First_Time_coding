@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>working with dates</title>
+    <style>
+.container{
+    padding: 5px;
+    border: 3px solid blueviolet;
+    min-width:20px;
+    background-color: rgb(183, 153, 211);
+    color: rgb(241, 241, 240);
+}
+    </style>
+    
+
+</head>
+<body>
+    <div class="container">
+        <h2>Hi</h2>
+    </div>
+
+    <script>
+  /* -----Read me by EmmanueL Agwegiokhe----
+    time() returns Time: hh:mim am/pm 
+    hrs()  returns current only: hh
+    min()  returns current only: minust
+  */      
+ //hours
+    hrs =() => {
+     let d = new Date();
+     let dd = d.getDay();
+     let hh = d.getHours();
+     let ss = d.getSeconds();
+
+    if (hh>12){ return (hh) }else if (hh<=12){return hh};}
+     
+    //Minutes
+    min = () =>{
+        let d = new Date();
+        let mn = d.getMinutes();
+        if (mn<10){ return "0" + (mn) }else if (mn>=10){return mn};}
+    
+        //am or pm
+    amp = ()=>{
+        let hs = hrs();
+        if(hs < 12 || hs == 0 ){return 'am'}else if(hs >= 12 ){return 'pm'}
+     }
+        
+    time = () =>{
+        let hr = hrs();
+        let mints = min();
+        let amPm= amp();
+
+        if (hr > 12 ){ return  (hr - 12) +" : " + mints + " "+amPm } else
+        if (hr <= 12 && hr > 1){ return  hr +" : " + mints + " "+amPm }else 
+        if (hr == 0 ){ return  12 +" : " + mints + " "+amPm };
+        
+    }  
+
+    // Testing the functions 
+     let x = document.querySelector('h2');
+     x.innerText="Time: "+ time();
+
+     let Xa = document.createElement('li') ;
+     x.appendChild(Xa).innerHTML="hrs: "+hrs();
+     
+     let Xb = document.createElement('li') ;
+     x.appendChild(Xb).innerHTML="mints: "+min();
+   </script>
+</body>
+</html>
