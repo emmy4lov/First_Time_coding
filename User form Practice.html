@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+    
     *{
         padding: 0px;
         margin: 0px;
@@ -15,7 +16,14 @@
        width: 90%;
        margin: 10px auto;
     }
+button{
+  margin-left:35%;
+  margin-top:11px;
+  padding :7px;
+  background-color:aliceblue;
+  color: rgb(12, 124, 87);
 
+}
     .header{
         background-color: grey;
         color:aliceblue;
@@ -44,11 +52,11 @@
 
     .sidebar{
         grid-column-start: 3;
-        grid-column-end: ; 
         background-color: blueviolet;
         padding: 10px;
         margin:8px 8px;
     }
+    
     </style>
     <title>Handle User Input</title>
 </head>
@@ -60,9 +68,13 @@
 
         <div class="bodySection">
           <div class="questions">
-           <h3>Hoddies</h3>
-           
-           <form action="">
+           <form action="" id='login'>
+               <label for="">First Name</label><input type="text" id='firstName'><br>
+               <label for="">Surn Name</label><input type="password" id='surnName'>
+               <br><button id='submitButton' type='submit'>Submit</button>
+           </form>
+            <h3>Hoddies</h3>
+            <form action="">
             <div class="hobbies">
             <input type="checkbox" id="Sport" value="Sport" name="sport">
             <label for="sport">Sport</label><br>
@@ -86,18 +98,26 @@
         </form>
           </div>
         <div class="sidebar">
-            side
+            <h4>side</h4>
         </div>
     </div>
 
     </div>
-    <script>
-        
 
+    <script>
+        let subBtn = document.getElementById('submitButton');
+
+        subBtn.addEventListener('click', ($event)=> {
+            $event.preventDefault();
+            let fname = document.getElementById('firstName');
+            let fnameValue = fname.value;
+            let responds = document.querySelector('h4');
+            let loginForm = document.getElementById('login');
+            responds.innerText=fnameValue;
+        loginForm.reset();
+        })
     </script>
 </body>
 
-<script>
 
-</script>
 </html>
