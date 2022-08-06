@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <style> 
+  *{
+  margin:0px;
+  padding:0px;
+  box-sizing:border-boxing;
+}
+
+h1{
+  color:#31219C;
+  padding-bottom:3px;
+}
+.container{
+  display: flex;
+  width:98%;
+  height:300px;
+  background-color:#F0F2F5;
+  align-items:center;
+  justify-content:space-around;
+  
+  }
+
+.login{
+  width:300px;
+}
+
+form{
+  display:grid;
+  align-items:space-around;
+  text-align:center;
+  background-color:white;
+  border-radius:5px;
+  box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding:10px 0px;
+}
+
+input{
+  width:90%;
+  height:25px;
+}
+
+button{  
+  border:2px;
+  border-radius:3px;
+  width:80%;
+  height:30px;
+  margin:3px auto;
+}
+
+#btnlogin{
+  background-color:#31219C;
+}
+
+#btnsignup{
+  background-color:#329C21;
+}
+
+a{
+  text-decoration: none;  
+}
+
+ </style>
+  <title>Facebook Login</title>
+</head>
+<body>
+ <div class="container">
+   <div class="logo"><h1>Facebook</h1> 
+   <div class="text">Connect with friends and the world around on facebook</div></div>
+  
+   <div class="login">
+     <form action="">
+       <label for="name"> <input placeholder="Name" type="text"></label><br>
+       <label for="name"> <input placeholder="Password" type="password"></label><br>
+       <button id="btnlogin">Login</button>
+       <div><a href="">Forgot password?</a></div> <hr>
+       <button id="btnsignup">Signup</button>
+     </form>
+   </div>
+  
+  </div>
+</body>
+</html>
